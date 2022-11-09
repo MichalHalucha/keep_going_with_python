@@ -1,11 +1,16 @@
 def goes_after(word: str, first: str, second: str) -> bool:
-    dictrionary = set(word.strip())
-    print(dictrionary)
+    try:
+        a, b = word.index(first), word.index(second)
+        if a == b:
+            return False
+        if b - a == 1:
+            return True
+    except:
+        return False
     return False
+
 #If more than one symbol is in the list you should always count the first one
-#One of the symbols are not in the given word - your function should return False;
 #Any symbol appears in a word more than once - use only the first one;
-#Two symbols are the same - your function should return False;
 #The condition is case sensitive, which means 'a' and 'A' are two different symbols.
 
 
