@@ -6,6 +6,7 @@ def checkio(words: str) -> bool:
 
 def index_of_digit(list_words):
     counter_list = 0
+    counter_niema = 0
     for x in list_words:
         #pojedynczy_item
         for key in x:
@@ -16,12 +17,14 @@ def index_of_digit(list_words):
                     print(key, "jest")
                     counter_list = 0
                     print("Lecimy dalej")
-                    continue
                 else:
                     print(key, "nie ma")
+                    counter_niema+=1
+                    if counter_niema == len(x):
+                        counter_list += 1
         counter_list += 1
         print("______________________________________________"+str(counter_list))
-        if counter_list == 3:
+        if counter_list == 4:
             return True
     return False
 
@@ -33,3 +36,4 @@ assert checkio("1 2 3 4") == False
 assert checkio("bla bla bla bla") == True
 assert checkio("Hi") == False
 assert checkio('one two 3 four five six 7 eight 9 ten eleven 12') == True
+assert checkio('one two 3 four five 6 seven eight 9 ten eleven 12') == False
