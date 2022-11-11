@@ -1,3 +1,12 @@
+def checkio(words):
+    succ = 0
+    for word in words.split():
+        succ = (succ + 1)*word.isalpha()
+        if succ == 3: return True
+    else: return False
+#_________________________
+
+
 dgits = {"1","2","3","4","5","6","7","8","9"}
 def checkio(words: str) -> bool:
     list_words = words.split(" ")
