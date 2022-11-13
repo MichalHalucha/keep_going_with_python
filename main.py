@@ -12,3 +12,5 @@ if __name__ == '__main__':
     acceptable_Password_III()
     goes_right_after()
     Three_Words()
+
+    #test pkrolak
